@@ -36,7 +36,7 @@ app.get("/getfiles", (request, response) => {
     // Retrive all text files
     const textFiles = files.filter((file) => path.extname(file) === ".txt");
     // Provide the list of files
-    response.json({ files: textFiles, folderPath });
+    response.json({ files: textFiles });
   } catch (error) {
     response.status(500).json({ error: error.message });
   }
